@@ -1,0 +1,19 @@
+.provBorders {
+    fill: #ccc;
+    cursor: pointer;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .provBorders.active {
+    fill: rgb(255, 164, 27);
+    cursor: pointer;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .provBorders:hover{
+    fill: rgb(255, 220, 149);
+  }

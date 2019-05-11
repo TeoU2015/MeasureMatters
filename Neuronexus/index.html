@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style> /* set the CSS */
+
+    body { font: 12px Arial;}
+    
+    path { 
+        stroke: rgb(0, 0, 0);
+        stroke-width: 1;
+        fill: none;
+    }
+    
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: grey;
+        stroke-width: 1;
+        shape-rendering: crispEdges;
+    }
+    
+    </style>
+
+<!-- Initialize a select button -->
+<div id="selectButton"></div>
+<div id="map"></div>
+
+<body>
+    <div class="content">
+      <div>
+          <button id="resetProvinceButton">Reset</button>
+          <button id="consoleLogData">Log Data</button>
+          <form id="dataTypeForm">
+            <p>Filter By:</p>
+            <input type="radio" name="groupBy" value="program" checked="checked">
+            Program<br>
+            <input type="radio" name="groupBy" value="gvtMinistry">
+            Government Ministry<br>
+            <input type="radio" name="groupBy" value="pType">
+            Program Type<br>  
+          </form>
+          <br>
+          <select id="provinceSelection">
+              <option value="">Please select a province</option>
+          </select>
+      </div>
+      
+      <div id="pieGraph"></div>
+      <div id="barGraph"></div>
+      <div id="scatterGraph"></div>
+      
+    </div>
+  </body>
+
+<text id="title">Alberta</text>
+
+<!--- Graph goes here -->
+<div id="lineChart"></div>
+<script src="./libraries/d3.v5.js" type="text/javascript"></script>
+<script src="./libraries/d3-geo.js" type="text/javascript"></script>
+<script src="./libraries/d3-geo-projection.v2.min.js" type="text/javascript"></script>
+<script src="./libraries/topojson.v2.min.js"></script>
+<script src="./libraries/d3-scale-chromatic.min.js"></script>
+<script src="./js/LineChart.js" type="text/javascript"></script>
+<script src="./js/CanadaFilter.js" type="text/javascript"></script>
+<script src="./js/karm.js"></script>
+<link rel="stylesheet" href="./css/dashboard.css">
